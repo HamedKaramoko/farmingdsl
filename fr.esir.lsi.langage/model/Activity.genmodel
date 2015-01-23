@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.esir.lsi.langage/src" modelPluginID="fr.esir.lsi.langage"
+    modelName="Activity" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Activity.ecore</foreignModel>
+  <genPackages prefix="Activity" disposableProviderFactory="true" ecorePackage="Activity.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Activity.ecore#//Month">
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/JANUARY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/FEBRARY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/MARCH"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/APRIL"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/MAY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/JUNE"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/JULY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/AUGUST"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/SEPTEMBER"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/OCTOBER"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/NOVEMBER"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Month/DECEMBER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Activity.ecore#//Periodicite">
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Periodicite/HALF_DAILY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Periodicite/DAILY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Periodicite/WEEKLY"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Periodicite/MONTHLY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Activity.ecore#//Activites">
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/LABOUR"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/SEMIS"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/IRRIGATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/FERTILISATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/RECOLTE"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/ALIMENTATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/TRAITE"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/SURVEILLANCE_AGNELAGE"/>
+      <genEnumLiterals ecoreEnumLiteral="Activity.ecore#//Activites/SURVEILLANCE_VELAGE"/>
+    </genEnums>
+    <genClasses ecoreClass="Activity.ecore#//ResourceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Activity.ecore#//ResourceType/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Activity.ecore#//ResourceType/resource"/>
+    </genClasses>
+    <genClasses ecoreClass="Activity.ecore#//Predicat"/>
+    <genClasses ecoreClass="Activity.ecore#//Rule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Activity.ecore#//Rule/predicat"/>
+    </genClasses>
+    <genClasses ecoreClass="Activity.ecore#//Activity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Activity.ecore#//Activity/periodicite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Activity/res_alloc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Activity/rule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Activity/fin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Activity/debut"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Activity.ecore#//Activity/atelier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Activity.ecore#//Activity/activites"/>
+    </genClasses>
+    <genClasses ecoreClass="Activity.ecore#//Model">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Activity.ecore#//Model/EReference0"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Model/activity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Model/res_type"/>
+    </genClasses>
+    <genClasses ecoreClass="Activity.ecore#//Date">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Activity.ecore#//Date/day"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Activity.ecore#//Date/month"/>
+    </genClasses>
+    <genClasses ecoreClass="Activity.ecore#//Res_Alloc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Activity.ecore#//Res_Alloc/duration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Activity.ecore#//Res_Alloc/res_type"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Exploitation" disposableProviderFactory="true" ecorePackage="Exploitation.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Exploitation.ecore#//Cereal">
+      <genEnumLiterals ecoreEnumLiteral="Exploitation.ecore#//Cereal/CORN"/>
+      <genEnumLiterals ecoreEnumLiteral="Exploitation.ecore#//Cereal/WHEAT"/>
+      <genEnumLiterals ecoreEnumLiteral="Exploitation.ecore#//Cereal/SORGHUM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Exploitation.ecore#//Animals">
+      <genEnumLiterals ecoreEnumLiteral="Exploitation.ecore#//Animals/OVIN"/>
+      <genEnumLiterals ecoreEnumLiteral="Exploitation.ecore#//Animals/BOVIN"/>
+    </genEnums>
+    <genClasses ecoreClass="Exploitation.ecore#//Exploitation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Exploitation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Exploitation.ecore#//Exploitation/Ressource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Exploitation.ecore#//Exploitation/Surface"/>
+    </genClasses>
+    <genClasses ecoreClass="Exploitation.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Ressource/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Exploitation.ecore#//Ressource/Exploitation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Exploitation.ecore#//Ressource/resourceType"/>
+    </genClasses>
+    <genClasses ecoreClass="Exploitation.ecore#//Surface">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Exploitation.ecore#//Surface/Exploitation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Exploitation.ecore#//Surface/Parcelle"/>
+    </genClasses>
+    <genClasses ecoreClass="Exploitation.ecore#//Parcelle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Parcelle/irrigue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Parcelle/nbHectare"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Parcelle/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Exploitation.ecore#//Parcelle/Surface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Exploitation.ecore#//Parcelle/Atelier"/>
+    </genClasses>
+    <genClasses ecoreClass="Exploitation.ecore#//Atelier">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Exploitation.ecore#//Atelier/Parcelle"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Exploitation.ecore#//Atelier/activity"/>
+    </genClasses>
+    <genClasses ecoreClass="Exploitation.ecore#//Elevage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Elevage/animals"/>
+    </genClasses>
+    <genClasses ecoreClass="Exploitation.ecore#//Culture">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Exploitation.ecore#//Culture/cereals"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
